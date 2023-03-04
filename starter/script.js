@@ -142,6 +142,9 @@ function getPasswordOptions() {
 
 };
   
+if (!specialValue && !upperCase && !numericValue)
+  alert("Must fit the criteria or choose at least one character type!")
+
  
   
     
