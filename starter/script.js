@@ -107,30 +107,40 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 
-let passwordLength
+
 function getPasswordOptions() {
-};
+}
+  {let passwordLength
+  keyArray = [];
 
-  passwordLength = prompt("How many characters would you like your password to contain (Choose between 10 - 64)?");
+//input intergers to continue to run thorugh the series of prompts
+  passwordLength = parseInt(prompt("How many characters would you like your password to contain (Choose between 10 - 64)?"));
 
-  if (passwordLength >= 10 && passwordLength < 64 ) {
-    alert("Confirm");
-  } else {passwordLength < 10 || passwordLength > 64} {
+  if (passwordLength < 10 || passwordLength > 64) {
     alert("Password length needs to be between 10 - 64 characters");
+  
+  } else if (passwordLength >= 10 && passwordLength < 64 ) {
+    alert("Confirm");
+    
   };
 
+  //concat to continue joining the strings as the questions are asked
+  if (confirm("Would you like to include lowercase characters? Press OK"));{
+    keyArray = keyArray.concat(lowerCasedCharacters);
+  }
+  if (confirm("Would you like to include uppercase characters? Press OK")); {
+    keyArray = keyArray.concat(upperCasedCharacters);
+  }
+  if (confirm("Would you like to include numeric characters? Press OK")); {
+    keyArray =keyArray.concat(numericCharacters);
+  } 
+  if (confirm("Would you like to include special characters? Press OK")); {
+    keyArray =keyArray.concat(specialCharacters);
+  };
 
+}
+ 
 
-
-
-
-
-
-
-// confirm("Would you like to include lowercase characters? Press OK");
-// confirm("Would you like to include uppercase characters? Press OK");
-// confirm("Would you like to include numeric characters? Press OK");
-// confirm("Would you like to include special characters? Press OK");
 
 // Function for getting a random element from an array
 function getRandom(arr) {
