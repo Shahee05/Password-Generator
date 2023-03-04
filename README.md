@@ -10,10 +10,12 @@ When the link is clicked, the following image below would be presented:
 When the series of prompts are answered, then a unique password would be generated. Example shown below:
 
 
-<img src="Password-Generator/assets/Screenshot 2023-03-04 at 21.58.29.png" alt text="example of random password">
+<img src="assets/Screenshot 2023-03-04 at 21.58.29.png" alt text="example of random password">
 
 
 ## *Link to the URL*
+
+https://shahee05.github.io/Password-Generator/
 
 
 
