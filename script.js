@@ -98,7 +98,7 @@ var upperCasedCharacters = [
 
 // Prompts required;
 // 1) How many characters would you like your password to contain?
-// Between 10 - 64
+// Between 8 - 128
 // 2) Would you like to include lowercase characters?
 // 3) Would you like to include uppercase characters?
 // 4) Would you like to include numeric characters?
@@ -116,11 +116,11 @@ function getPasswordOptions() {
 //input intergers to continue to run thorugh the series of prompts
   passwordLength = parseInt(prompt("How many characters would you like your password to contain (Choose between 10 - 64)?"));
 
-  if (passwordLength < 10 || passwordLength > 64) {
-    alert("Password length needs to be between 10 - 64 characters. Please start again."); 
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert("Password length needs to be between 8 - 128 characters. Please start again."); 
   } 
   
-   else if (passwordLength => 10 && passwordLength <= 64 )  {
+   else if (passwordLength => 8 && passwordLength <= 128 )  {
 
   var lowerCase = confirm("Would you like to include lowercase characters? Press OK");
   if (lowerCase===true) {
