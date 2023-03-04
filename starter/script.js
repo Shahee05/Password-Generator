@@ -107,39 +107,41 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 
-
+let passwordLength
+  keyArray = [];
 function getPasswordOptions() {
 }
-  {let passwordLength
-  keyArray = [];
+ 
 
 //input intergers to continue to run thorugh the series of prompts
   passwordLength = parseInt(prompt("How many characters would you like your password to contain (Choose between 10 - 64)?"));
 
-  if (passwordLength < 10 || passwordLength > 64) {
-    alert("Password length needs to be between 10 - 64 characters");
-  
-  } else if (passwordLength >= 10 && passwordLength < 64 ) {
-    alert("Confirm");
-    
-  };
-
-  //concat to continue joining the strings as the questions are asked
-  if (confirm("Would you like to include lowercase characters? Press OK"));{
+  if (passwordLength <= 10 || passwordLength > 64) {
+    alert("Password length needs to be between 10 - 64 characters")
+    alert("Please start again");
+  } else if (passwordLength >= 10 && passwordLength <= 64 )
+  var lowerCase = confirm("Would you like to include lowercase characters? Press OK");
+  if (lowerCase===true) {
     keyArray = keyArray.concat(lowerCasedCharacters);
-  }
-  if (confirm("Would you like to include uppercase characters? Press OK")); {
-    keyArray = keyArray.concat(upperCasedCharacters);
-  }
-  if (confirm("Would you like to include numeric characters? Press OK")); {
-    keyArray =keyArray.concat(numericCharacters);
-  } 
-  if (confirm("Would you like to include special characters? Press OK")); {
-    keyArray =keyArray.concat(specialCharacters);
-  };
 
-}
- 
+  }
+    
+  
+
+  // if (confirm("Would you like to include uppercase characters? Press OK")); {
+  //   keyArray = keyArray.concat(upperCasedCharacters);
+
+  //   if (confirm(!upperCasedCharacters || !lowerCasedCharacters)) { 
+  //     alert("Must choose one upper or lower case characters")
+  //   }
+  // }
+  // if (confirm("Would you like to include numeric characters? Press OK")); {
+  //   keyArray =keyArray.concat(numericCharacters);
+  // } 
+  // if (confirm("Would you like to include special characters? Press OK")); {
+  //   keyArray =keyArray.concat(specialCharacters);
+  // };
+
 
 
 // Function for getting a random element from an array
@@ -153,6 +155,7 @@ function generatePassword() {
   return "This is a password";
 }
 
+// return generatePassword;
 
 // Functionality of the page
 
