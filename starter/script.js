@@ -142,29 +142,41 @@ function getPasswordOptions() {
 
 };
   
-if (!specialValue && !upperCase && !numericValue)
+if (!specialValue && !upperCase && !numericValue && !lowerCase)
   alert("Must fit the criteria or choose at least one character type!")
 
  
   
-    
- 
- 
-
-
 
 // Function for getting a random element from an array
-function getRandom(arr) {
+
+function getRandomItem(arr) {
+var password = "";
+for (var i = 0; i < passwordLength; i++) {
+  const randomCharacter = Math.floor(Math.random() * keyArray.length);
+  password = password + keyArray[randomCharacter];
+} return password;
 
 }
+
+const result = getRandomItem(password);
+console.log(result);
+
+// assistance from stack overflow (used code and adapted to it - i.e. tested it out and then changed code)
+  // get random item
+  // const item = arr[randomIndex];
+// const array = [1, 'hello', 5, 8];
+
+// const result = getRandomItem(array);
+// console.log(result);
 
 // Function to generate password with user input
 function generatePassword() {
-  alert("This is a test");
-  return "This is a password";
+
+  return result;
 }
 
-// return generatePassword;
+
 
 // Functionality of the page
 
