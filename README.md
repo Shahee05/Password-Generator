@@ -23,7 +23,7 @@ https://shahee05.github.io/Password-Generator/
 
 When the button is clicked then prompts for the password criteria is presented:
 
-Length of password: At least 10 characters but no more than 64.
+Length of password: At least 8 characters but no more than 128.
 
 Can include character types:
 <br>

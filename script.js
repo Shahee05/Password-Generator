@@ -114,7 +114,7 @@ function getPasswordOptions() {
  
 
 //input intergers to continue to run thorugh the series of prompts
-  passwordLength = parseInt(prompt("How many characters would you like your password to contain (Choose between 10 - 64)?"));
+  passwordLength = parseInt(prompt("How many characters would you like your password to contain (Choose between 8 - 128)?"));
 
   if (passwordLength < 8 || passwordLength > 128) {
     alert("Password length needs to be between 8 - 128 characters. Please start again."); 
