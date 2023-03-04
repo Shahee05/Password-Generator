@@ -116,31 +116,37 @@ function getPasswordOptions() {
 //input intergers to continue to run thorugh the series of prompts
   passwordLength = parseInt(prompt("How many characters would you like your password to contain (Choose between 10 - 64)?"));
 
-  if (passwordLength <= 10 || passwordLength > 64) {
-    alert("Password length needs to be between 10 - 64 characters")
-    alert("Please start again");
-  } else if (passwordLength >= 10 && passwordLength <= 64 )
+  if (passwordLength < 10 || passwordLength > 64) {
+    alert("Password length needs to be between 10 - 64 characters. Please start again."); 
+  } 
+  
+   else if (passwordLength => 10 && passwordLength <= 64 )  {
+
   var lowerCase = confirm("Would you like to include lowercase characters? Press OK");
   if (lowerCase===true) {
     keyArray = keyArray.concat(lowerCasedCharacters);
-
-  }
+  };
     
+  var upperCase = (confirm("Would you like to include uppercase characters? Press OK"));
+  if (upperCase === true) 
+    keyArray = keyArray.concat(upperCasedCharacters);
   
 
-  // if (confirm("Would you like to include uppercase characters? Press OK")); {
-  //   keyArray = keyArray.concat(upperCasedCharacters);
+  var numericValue = (confirm("Would you like to include numeric characters? Press OK")); 
+      if (numericValue === true) 
+      keyArray =keyArray.concat(numericCharacters);
+    
+  var specialValue = (confirm("Would you like to include special characters? Press OK")); 
+      if (specialValue === true)
+      keyArray =keyArray.concat(specialCharacters);
 
-  //   if (confirm(!upperCasedCharacters || !lowerCasedCharacters)) { 
-  //     alert("Must choose one upper or lower case characters")
-  //   }
-  // }
-  // if (confirm("Would you like to include numeric characters? Press OK")); {
-  //   keyArray =keyArray.concat(numericCharacters);
-  // } 
-  // if (confirm("Would you like to include special characters? Press OK")); {
-  //   keyArray =keyArray.concat(specialCharacters);
-  // };
+};
+  
+ 
+  
+    
+ 
+ 
 
 
 
